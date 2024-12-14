@@ -1,3 +1,5 @@
+
+
 //Function to grab random int between min - max
 var randomInt = function (min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -5,6 +7,7 @@ var randomInt = function (min, max) {
 
 window.onload = function()
 {
+
 	// lets git the HTML canvas element so we draw on it
 	var canvas = document.getElementById("c");
 	var ctx = canvas.getContext("2d");
@@ -35,14 +38,14 @@ window.onload = function()
 		this.height = 20;
 
 		//random colors for our box
-		/*this.r = Math.round(Math.random()*255);
+		this.r = Math.round(Math.random()*255);
 		this.g = Math.round(Math.random()*255);
-		this.b = Math.round(Math.random()*255);*/
+		this.b = Math.round(Math.random()*255);
 
-		this.randomColor = randomInt(0,colorsArray.colors.length-1);
-		this.r = colorsArray.colors[this.randomColor].red;
-		this.g = colorsArray.colors[this.randomColor].green;
-		this.b = colorsArray.colors[this.randomColor].blue;
+		this.randomColor = randomInt(0,colorsArray.length -1);
+		this.r = colorsArray[this.randomColor].red;
+		this.g = colorsArray[this.randomColor].green;
+		this.b = colorsArray[this.randomColor].blue;
 
 		console.log(colorsArray);
 
